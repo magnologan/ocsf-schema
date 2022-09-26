@@ -1,0 +1,53 @@
+{
+    "caption": "Orchestrator",
+    "name": "orchestrator",
+    "description": "The orhcestrator object describes a specific cluster, which is a source of events. Container orchestration automates the deployment, management, scaling, and networking of containers.",
+    "extends": "object",
+    "attributes": {
+      "uid": {
+            "description": "The container unique identifier. For example: <code>a3bf90e006b2</code>.",
+            "requirement": "required"
+          },  
+      "name": {
+        "description": "The cluster name.",
+        "requirement": "required"
+      },
+      "resource_version": {
+        "description": "The version of the cluster.",
+        "requirement": "required"
+      },
+      "runtime": {
+        "description": "The runtime used to run the containers inside the cluster, such as Docker, containerd, CRI-O, podman.",
+        "requirement": "optional"
+      },
+      "type": {
+        "description": "The type of orchestrator managing the containers, such as ECS, EKS, K8s, OpenShift, or others.",
+        "requirement": "optional"
+      },
+      "creation_timestamp": {
+        "description": "The time the cluster was created.",
+        "requirement": "optional"
+      },
+      "labels":{
+        "description": "The array of labels defined in the cluster",
+        "requirement": "optional"
+      },
+      "annotations": {
+        "description": "The array of annotations of the cluster.",
+        "requirement": "optional"
+      },
+      "network_subnet": {
+        "description": "The CIDR networks used by the cluster.",
+        "requirement": "recommemded"
+      },
+      "images": {
+        "description": "The container images used the containers inside the cluster.",
+        "requirement": "recommemded"
+      },
+      "cluster_ip": {
+        "description": "The IP of the cluster.",
+        "requirement": "recommemded"
+      }
+    }
+  }
+  
